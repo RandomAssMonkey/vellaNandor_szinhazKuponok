@@ -1,4 +1,9 @@
 h1{
   text-align: center;
 }
-
+#hibaUzenet{
+  color: red;
+}
+form {
+  text-align: center;
+}
