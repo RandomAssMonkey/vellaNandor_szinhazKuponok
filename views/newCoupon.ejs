@@ -4,35 +4,54 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <title>Új kupon</title>
 </head>
 <body>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+    <a class="navbar-brand">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+    <li class="nav-item">
+    <a class="nav-link active" aria-current="page" href="/">Táblázat</a>
+    </li>
+    <li class="nav-item">
+    <a class="nav-link" href="/newCoupon">Új kupon létrehozása</a>
+    </li>
+    </ul>
+    </div>
+    </div>
+    </nav>
   <h1>Új kupon létrehozása</h1>
-  <div class="form">
+  <div class="container mt-5">
     <form method="post">
-      <div>
+      <div class="form-group">
         <label>
           Cím: <br>
           <input type="text" min="1" name="title">
         </label>
       </div>
-      <div>
+      <div class="form-group">
         <label>
-          Kedvezmény: <br>
-          <input type="number" max="99" min="1" name="percentage" >
+            Kedvezmény: <br>
+            <input type="number" max="99" min="1" name="percentage" >
         </label>
-      </div>
+      </div class="form-group">
       <div>
         <label>
           Kód: <br>
-          <input type="text" max="11" name="length">
+          <input type="text" max="11" name="code">
         </label>
-      </div>
+      </div class="form-group">
       <div>
-        <input type="submit" value="Új kupon">
+        <br><input type="submit" value="Új kupon" class="btn btn-primary">
       </div>
     </form>
     <p id="hibaUzenet"><%= messages %></p>
-  </div>
+    </div>
 </body>
 </html>
