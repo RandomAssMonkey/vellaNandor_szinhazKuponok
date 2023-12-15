@@ -41,7 +41,7 @@ export class AppController {
     const regex: RegExp = /^[A-Z]{4}-\d{6}$/;
     if(title == "" || percentage == "" || code == "") {
       return { messages: "Minden mezőt kötelező kitölteni!"};
-    } else if (parseInt(percentage) <= 1 && parseInt(percentage) > 100){
+    } else if (!(parseInt(percentage) >= 1 && parseInt(percentage) <= 99)){
       return { messages: "A kedvezmény 0 és 99 közötti szám!"};
     }else if(regex.test(code) != true){
       return {messages: "Hibás a kód formátuma!"}
