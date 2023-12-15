@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+  <title>Új kupon</title>
+</head>
+<body>
+  <h1>Új kupon létrehozása</h1>
+  <div class="form">
+    <form method="post">
+      <div>
+        <label>
+          Cím: <br>
+          <input type="text" min="1" name="title">
+        </label>
+      </div>
+      <div>
+        <label>
+          Kedvezmény: <br>
+          <input type="number" max="99" min="1" name="percentage" >
+        </label>
+      </div>
+      <div>
+        <label>
+          Kód: <br>
+          <input type="text" max="11" name="length">
+        </label>
+      </div>
+      <div>
+        <input type="submit" value="Új kupon">
+      </div>
+    </form>
+    <p id="hibaUzenet"><%= messages %></p>
+  </div>
+</body>
+</html>
